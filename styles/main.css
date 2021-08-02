@@ -1,0 +1,219 @@
+/* =================
+   REGLAS GENERALES 
+   ================= */
+body {
+  font-family: "Raleway", sans-serif;
+  font-size: 62.5%; /* Al cambiar este valor deberia de cambiar el font que estan definidos con rem ? */
+  color: #fff;
+}
+section {
+  padding: 80px 0;
+}
+h1,
+h2,
+h3 {
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 80px;
+}
+h1 {
+  font-size: 5.4rem;
+}
+h2 {
+  font-size: 3.6rem;
+}
+h3 {
+  font-size: 1.6rem;
+}
+article {
+  text-align: center;
+}
+img {
+  width: 100%;
+}
+input,
+textarea,
+button {
+  font-family: inherit;
+  font-size: 1.4rem;
+  border: none;
+  padding: 20px;
+  outline: none;
+  width: 100%;
+  border: 15px solid #16a085; /* tuve que usar esta propiedad porque no me salia el gap */
+}
+button {
+  color: #fff;
+  background-color: #233451;
+  width: 180px;
+  font-weight: 700;
+}
+button:hover {
+  animation: pulse 2s infinite;
+}
+@keyframes pulse {
+  0% {
+    background-color: #233451;
+  }
+
+  100% {
+    background-color: rgb(89, 86, 231);
+  }
+}
+.grid {
+  /* Estilo comun para todos los grids */
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+}
+/* ==============
+   SECCION INTRO 
+   ============== */
+.intro {
+  background-image: url("/images/fondo_alumno.png");
+  height: 525px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-y: bottom;
+  color: rgb(255, 255, 255);
+}
+.intro h1 {
+  text-shadow: 3px 3px 10px rgb(32, 30, 30);
+  animation: fadeIn linear 4s;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.intro h2 {
+  width: 365px;
+  position: absolute;
+  top: 40%;
+  left: 10%;
+  background-color: rgba(114, 153, 254, 0.7);
+  padding: 10px;
+  font-size: 1.9rem;
+}
+/* ==================
+   SECCION MY SKILLS 
+   ================== */
+.skills {
+  background-color: #7299fe;
+}
+.skills p {
+  font-size: 1.4rem;
+  font-weight: 500;
+  padding: 25px 0 5px;
+}
+.grid-skills {
+  gap: 5%;
+  width: 80%;
+}
+.grid-skills .skill {
+  width: 47.5%;
+}
+.progress {
+  background-color: #fff;
+  height: 10px;
+  display: flex;
+}
+.progress span {
+  background-color: #000;
+  animation-duration: 2s;
+  animation-name: slidein;
+}
+@keyframes slidein {
+  from {
+    margin-right: 100%;
+    width: 300%;
+  }
+  to {
+    margin-right: 0%;
+    width: 80%;
+  }
+}
+
+/* ==================
+   SECCION SERVICIOS 
+   ================== */
+.servicios {
+  background-color: #fb7171;
+}
+.servicios span {
+  height: inherit;
+  background-color: #000;
+  width: 35px;
+}
+.grid-servicios {
+  gap: 5%;
+  width: 80%;
+}
+.grid-servicios .servicio {
+  width: 30%;
+}
+.grid-servicios h3 {
+  margin-top: 10px;
+}
+.grid-servicios img {
+  width: auto;
+}
+/* ===================
+   SECCION PROTAFOLIO 
+   =================== */
+.portafolio {
+  background-color: #ffd233;
+}
+.grid-portafolio {
+  gap: 15px;
+  width: 80%;
+}
+.grid-portafolio figure {
+  width: 23%;
+}
+.grid-portafolio img:hover {
+  transition: 0.5s ease-in-out;
+}
+.grid-portafolio img:hover {
+  transform: scale(1.2, 1.2);
+  transition: 0.5s ease-in-out;
+}
+/* =================
+   SECCION CLIENTES 
+   ================= */
+.clientes {
+  background-color: #3f4e62;
+}
+.clientes div {
+  display: flex;
+  justify-content: space-around;
+  width: 90%;
+  margin: auto;
+}
+.clientes div figure {
+  background-color: #fff;
+  border: 10px solid #fff;
+  height: 80px;
+  display: flex;
+  align-items: center;
+}
+/* ==================
+   SECCION CONTACTO 
+   ================== */
+.contacto {
+  background-color: #16a085;
+}
+.grid-contacto {
+  width: 80%;
+}
+.grid-contacto div {
+  width: 50%;
+}
+/* Esta bien definir asi los dos ultimos campos del formulario ? o es mejor usar clases */
+.grid-contacto div:nth-last-of-type(-n + 2) {
+  width: 100%;
+  text-align: center;
+}
