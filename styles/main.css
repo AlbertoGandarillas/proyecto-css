@@ -70,7 +70,7 @@ button:hover {
    SECCION INTRO 
    ============== */
 .intro {
-  background-image: url("/images/fondo_alumno.png");
+  background-image: url("images/fondo_alumno.png");
   height: 525px;
   background-repeat: no-repeat;
   background-size: cover;
