@@ -1,6 +1,9 @@
 /* =================
    REGLAS GENERALES 
    ================= */
+   * {
+       box-sizing: border-box;
+   }
 body {
   font-family: "Raleway", sans-serif;
   font-size: 62.5%; /* Al cambiar este valor deberia de cambiar el font que estan definidos con rem ? */
@@ -168,11 +171,11 @@ button:hover {
   background-color: #ffd233;
 }
 .grid-portafolio {
-  gap: 15px;
   width: 80%;
 }
 .grid-portafolio figure {
   width: 23%;
+  margin: 1%;
 }
 .grid-portafolio img:hover {
   transition: 0.5s ease-in-out;
