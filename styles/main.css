@@ -121,6 +121,7 @@ button:hover {
 
 .intro img {
   width: 100%;
+  display: block;
 }
 
 .intro h2 {
