@@ -127,7 +127,7 @@ button:hover {
 .intro h2 {
   position: absolute;
   max-width: 365px;
-  bottom: 130px;
+  bottom: 5%;
   left: 50px;
   background-color: rgba(114, 153, 254, 0.7);
   padding: 16px;
