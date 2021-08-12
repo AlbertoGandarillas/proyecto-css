@@ -1,0 +1,352 @@
+/* IMPORTS */
+@import "colors";
+@import "fonts";
+@import "extends";
+/* =================
+   REGLAS GENERALES 
+   ================= */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%; /* Esta es la posicion correcta para utilizar el porcantaje con REM  */
+}
+
+body {
+  font-family: $font-family-primary;
+  color: $color-primary;
+  font-weight: bold;
+}
+
+section {
+  padding: 80px 0;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+h1 {
+  font-size: 5.4rem;
+}
+
+h2 {
+  font-size: 3.6rem;
+}
+
+h3 {
+  font-size: 1.6rem;
+  font-family: $font-family-secondary;
+}
+
+article {
+  text-align: center;
+}
+
+img {
+  width: 100%;
+}
+
+p,
+input,
+textarea {
+  font-family: $font-family-secondary;
+}
+
+input,
+textarea,
+button {
+  font-size: 1.4rem;
+  border: none;
+  padding: 20px;
+  outline: none;
+  width: 100%;
+}
+
+button {
+  color: $color-primary;
+  background-color: $button-color;
+  width: 180px;
+  font-weight: 700;
+  &:hover {
+    animation: pulse 2s infinite;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    background-color: $button-color;
+  }
+
+  100% {
+    background-color: $button-color-changed;
+  }
+}
+
+/* ==============
+     SECCION INTRO 
+     ============== */
+.intro {
+  position: relative;
+  padding: 0;
+
+  h1 {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: 45px;
+    text-shadow: 3px 3px 10px rgb(32, 30, 30);
+    animation: fadeIn linear 4s;
+  }
+
+  img {
+    width: 100%;
+    display: block;
+  }
+
+  h2 {
+    position: absolute;
+    max-width: 365px;
+    bottom: 5%;
+    left: 50px;
+    background-color: rgba(114, 153, 254, 0.7);
+    padding: 16px;
+    font-size: 2.9rem;
+    line-height: 1.2;
+    text-align: left;
+  }
+
+  @media (max-width:360px) {
+    h1 {
+        top: 10px;
+        text-align: left;
+        left: 10px;
+        font-size: 2.9rem;
+    
+      }
+
+    h2 {
+        max-width: 100%;
+        padding: 5px;
+        font-size: 1.4rem;
+        text-align: center;
+        margin: 10px auto;
+        left: 20px;
+        right: 20px;
+      }
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* ==================
+     SECCION MY SKILLS 
+     ================== */
+
+.skills {
+  background-color: $background-color-skills;
+  p {
+    font-size: 1.4rem;
+    font-weight: 500;
+    padding: 25px 0 5px;
+  }
+}
+
+.grid-skills {
+  @extend %grid-flex-wrap;
+  width: 80%;
+  .skill {
+    width: 50%;
+    padding: 10px;
+  }
+
+  @media (max-width:360px) {
+    .skill {
+        width: 100%;
+        padding: 0;
+        p {
+            padding: 15px 0 5px;
+          }
+      }
+  }
+}
+
+.progress {
+  background-color: $color-primary;
+  height: 10px;
+  display: flex;
+  span {
+    background-color: #000;
+    animation-duration: 2s;
+    animation-name: slidein;
+  }
+}
+
+@keyframes slidein {
+  from {
+    margin-right: 100%;
+    width: 300%;
+  }
+  to {
+    margin-right: 0%;
+    width: 80%;
+  }
+}
+
+/* ==================
+     SECCION SERVICIOS 
+     ================== */
+
+.servicios {
+  background-color: $background-color-servicios;
+}
+
+.grid-servicios {
+  @extend %grid-flex-wrap;
+  width: 80%;
+  h3 {
+    margin-top: 10px;
+  }
+  img {
+    width: auto;
+  }
+  .servicio {
+    width: 33%;
+  }
+  @media (max-width:360px) {
+    .servicio {
+        width: 100%;
+      }
+  }
+}
+
+/* ===================
+     SECCION PROTAFOLIO 
+     =================== */
+
+.portafolio {
+  background-color: $background-color-portafolio;
+}
+
+.grid-portafolio {
+  @extend %grid-flex-wrap;
+  width: 80%;
+  figure {
+    width: 25%;
+    padding: 10px;
+  }
+  @media (max-width:360px) {
+    figure {
+        width: 100%;
+        padding: 10px;
+      }
+  }
+}
+
+.grid-portafolio figure {
+  width: 25%;
+  padding: 10px;
+  img:hover {
+    transform: scale(1.2, 1.2);
+    transition: 0.5s ease-in-out;
+  }
+}
+
+/* =================
+     SECCION CLIENTES 
+     ================= */
+
+.clientes {
+  background-color: $background-color-clientes;
+  div {
+    display: flex;
+    justify-content: space-around;
+    width: 90%;
+    margin: auto;
+    figure {
+        background-color: $color-primary;
+        border: 10px solid $color-primary;
+        height: 80px;
+        display: flex;
+        align-items: center;
+      }
+  }
+  @media (max-width:360px) {
+    img {
+        width: 100%;
+        margin: auto;
+      }
+    div {
+        flex-direction: column;
+        figure {
+            margin: 20px;
+            height: auto;
+          }
+      }
+  }
+}
+
+/* ==================
+     SECCION CONTACTO 
+     ================== */
+
+.contacto {
+  background-color: $background-color-contacto;
+}
+
+.grid-contacto {
+  @extend %grid-flex-wrap;
+  width: 80%;
+  div {
+    width: 50%;
+    padding: 10px;
+    &:nth-last-of-type(-n + 2) {
+        width: 100%;
+        text-align: center;
+      }
+  }
+  @media (max-width:360px) {
+    div {
+        width: 100%;
+      }
+  }
+}
+
+/* ========== 
+     RESPONSIVE
+     ========== */
+@media (max-width: 360px) {
+  /* GLOBALES */
+  section {
+    padding: 30px 0;
+    overflow: hidden;
+  }
+
+  h1,
+  h2,
+  h3 {
+    margin-bottom: 30px;
+  }
+
+  h2 {
+    font-size: 3rem;
+  }
+  
+  button {
+    width: 100%;
+  }
+}

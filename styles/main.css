@@ -1,15 +1,26 @@
+/* IMPORTS */
+.grid-skills, .grid-servicios, .grid-portafolio, .grid-contacto {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: auto;
+}
+
 /* =================
    REGLAS GENERALES 
    ================= */
-
 * {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
 html {
-  font-size: 62.5%; /* Esta es la posicion correcta para utilizar el porcantaje con REM  */
+  font-size: 62.5%;
+  /* Esta es la posicion correcta para utilizar el porcantaje con REM  */
 }
 
 body {
@@ -75,29 +86,31 @@ button {
 }
 
 button:hover {
-  animation: pulse 2s infinite;
+  -webkit-animation: pulse 2s infinite;
+          animation: pulse 2s infinite;
+}
+
+@-webkit-keyframes pulse {
+  0% {
+    background-color: #233451;
+  }
+  100% {
+    background-color: #5956e7;
+  }
 }
 
 @keyframes pulse {
   0% {
     background-color: #233451;
   }
-
   100% {
-    background-color: rgb(89, 86, 231);
+    background-color: #5956e7;
   }
 }
 
-.grid {
-  /* Estilo comun para todos los grids */
-  display: flex;
-  flex-wrap: wrap;
-  margin: auto;
-}
-
 /* ==============
-   SECCION INTRO 
-   ============== */
+     SECCION INTRO 
+     ============== */
 .intro {
   position: relative;
   padding: 0;
@@ -108,17 +121,9 @@ button:hover {
   width: 100%;
   text-align: center;
   top: 45px;
-  text-shadow: 3px 3px 10px rgb(32, 30, 30);
-  animation: fadeIn linear 4s;
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+  text-shadow: 3px 3px 10px #201e1e;
+  -webkit-animation: fadeIn linear 4s;
+          animation: fadeIn linear 4s;
 }
 
 .intro img {
@@ -138,12 +143,47 @@ button:hover {
   text-align: left;
 }
 
-/* ==================
-   SECCION MY SKILLS 
-   ================== */
+@media (max-width: 360px) {
+  .intro h1 {
+    top: 10px;
+    text-align: left;
+    left: 10px;
+    font-size: 2.9rem;
+  }
+  .intro h2 {
+    max-width: 100%;
+    padding: 5px;
+    font-size: 1.4rem;
+    text-align: center;
+    margin: 10px auto;
+    left: 20px;
+    right: 20px;
+  }
+}
 
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* ==================
+     SECCION MY SKILLS 
+     ================== */
 .skills {
-  background-color: #7299fe;
+  background-color: #7299FE;
 }
 
 .skills p {
@@ -161,16 +201,41 @@ button:hover {
   padding: 10px;
 }
 
+@media (max-width: 360px) {
+  .grid-skills .skill {
+    width: 100%;
+    padding: 0;
+  }
+  .grid-skills .skill p {
+    padding: 15px 0 5px;
+  }
+}
+
 .progress {
   background-color: #fff;
   height: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
 .progress span {
   background-color: #000;
-  animation-duration: 2s;
-  animation-name: slidein;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-name: slidein;
+          animation-name: slidein;
+}
+
+@-webkit-keyframes slidein {
+  from {
+    margin-right: 100%;
+    width: 300%;
+  }
+  to {
+    margin-right: 0%;
+    width: 80%;
+  }
 }
 
 @keyframes slidein {
@@ -185,19 +250,14 @@ button:hover {
 }
 
 /* ==================
-   SECCION SERVICIOS 
-   ================== */
-
+     SECCION SERVICIOS 
+     ================== */
 .servicios {
-  background-color: #fb7171;
+  background-color: #FB7171;
 }
 
 .grid-servicios {
   width: 80%;
-}
-
-.grid-servicios .servicio {
-  width: 33%;
 }
 
 .grid-servicios h3 {
@@ -208,12 +268,21 @@ button:hover {
   width: auto;
 }
 
-/* ===================
-   SECCION PROTAFOLIO 
-   =================== */
+.grid-servicios .servicio {
+  width: 33%;
+}
 
+@media (max-width: 360px) {
+  .grid-servicios .servicio {
+    width: 100%;
+  }
+}
+
+/* ===================
+     SECCION PROTAFOLIO 
+     =================== */
 .portafolio {
-  background-color: #ffd233;
+  background-color: #FFD233;
 }
 
 .grid-portafolio {
@@ -225,26 +294,38 @@ button:hover {
   padding: 10px;
 }
 
-.grid-portafolio img:hover {
-  transition: 0.5s ease-in-out;
+@media (max-width: 360px) {
+  .grid-portafolio figure {
+    width: 100%;
+    padding: 10px;
+  }
 }
 
-.grid-portafolio img:hover {
-  transform: scale(1.2, 1.2);
+.grid-portafolio figure {
+  width: 25%;
+  padding: 10px;
+}
+
+.grid-portafolio figure img:hover {
+  -webkit-transform: scale(1.2, 1.2);
+          transform: scale(1.2, 1.2);
+  -webkit-transition: 0.5s ease-in-out;
   transition: 0.5s ease-in-out;
 }
 
 /* =================
-   SECCION CLIENTES 
-   ================= */
-
+     SECCION CLIENTES 
+     ================= */
 .clientes {
-  background-color: #3f4e62;
+  background-color: #3F4E62;
 }
 
 .clientes div {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-around;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   width: 90%;
   margin: auto;
 }
@@ -253,16 +334,36 @@ button:hover {
   background-color: #fff;
   border: 10px solid #fff;
   height: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 360px) {
+  .clientes img {
+    width: 100%;
+    margin: auto;
+  }
+  .clientes div {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .clientes div figure {
+    margin: 20px;
+    height: auto;
+  }
 }
 
 /* ==================
-   SECCION CONTACTO 
-   ================== */
-
+     SECCION CONTACTO 
+     ================== */
 .contacto {
-  background-color: #16a085;
+  background-color: #16A085;
 }
 
 .grid-contacto {
@@ -279,84 +380,31 @@ button:hover {
   text-align: center;
 }
 
+@media (max-width: 360px) {
+  .grid-contacto div {
+    width: 100%;
+  }
+}
+
 /* ========== 
-   RESPONSIVE
-   ========== */
+     RESPONSIVE
+     ========== */
 @media (max-width: 360px) {
   /* GLOBALES */
   section {
     padding: 30px 0;
     overflow: hidden;
   }
-
   h1,
   h2,
   h3 {
     margin-bottom: 30px;
   }
-
   h2 {
     font-size: 3rem;
-  }
-  /* BANNER INTRO */
-  .intro h1 {
-    top: 10px;
-    text-align: left;
-    left: 10px;
-    font-size: 2.9rem;
-  }
-
-  .intro h2 {
-    max-width: 100%;
-    padding: 5px;
-    font-size: 1.4rem;
-    text-align: center;
-    margin: 10px auto;
-    left: 20px;
-    right: 20px;
-  }
-
-  /* SKILLS */
-  .grid-skills .skill {
-    width: 100%;
-    padding: 0;
-  }
-
-  .skills p {
-    padding: 15px 0 5px;
-  }
-
-  /* SERVICIOS */
-  .grid-servicios .servicio {
-    width: 100%;
-  }
-
-  /* PORTAFOLIO */
-  .grid-portafolio figure {
-    width: 100%;
-    padding: 10px;
-  }
-
-  /* CLIENTES */
-  .clientes div {
-    flex-direction: column;
-  }
-
-  .clientes div figure {
-    margin: 20px;
-    height: auto;
-  }
-
-  .clientes img {
-    width: 100%;
-    margin: auto;
-  }
-
-  /* CONTACTO */
-  .grid-contacto div {
-    width: 100%;
   }
   button {
     width: 100%;
   }
 }
+/*# sourceMappingURL=main.css.map */
