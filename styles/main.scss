@@ -123,24 +123,23 @@ button {
     text-align: left;
   }
 
-  @media (max-width:360px) {
+  @media (max-width: 360px) {
     h1 {
-        top: 10px;
-        text-align: left;
-        left: 10px;
-        font-size: 2.9rem;
-    
-      }
+      top: 10px;
+      text-align: left;
+      left: 10px;
+      font-size: 2.9rem;
+    }
 
     h2 {
-        max-width: 100%;
-        padding: 5px;
-        font-size: 1.4rem;
-        text-align: center;
-        margin: 10px auto;
-        left: 20px;
-        right: 20px;
-      }
+      max-width: 100%;
+      padding: 5px;
+      font-size: 1.4rem;
+      text-align: center;
+      margin: 10px auto;
+      left: 20px;
+      right: 20px;
+    }
   }
 }
 
@@ -174,14 +173,14 @@ button {
     padding: 10px;
   }
 
-  @media (max-width:360px) {
+  @media (max-width: 360px) {
     .skill {
-        width: 100%;
-        padding: 0;
-        p {
-            padding: 15px 0 5px;
-          }
+      width: 100%;
+      padding: 0;
+      p {
+        padding: 15px 0 5px;
       }
+    }
   }
 }
 
@@ -227,10 +226,10 @@ button {
   .servicio {
     width: 33%;
   }
-  @media (max-width:360px) {
+  @media (max-width: 360px) {
     .servicio {
-        width: 100%;
-      }
+      width: 100%;
+    }
   }
 }
 
@@ -249,11 +248,11 @@ button {
     width: 25%;
     padding: 10px;
   }
-  @media (max-width:360px) {
+  @media (max-width: 360px) {
     figure {
-        width: 100%;
-        padding: 10px;
-      }
+      width: 100%;
+      padding: 10px;
+    }
   }
 }
 
@@ -278,25 +277,25 @@ button {
     width: 90%;
     margin: auto;
     figure {
-        background-color: $color-primary;
-        border: 10px solid $color-primary;
-        height: 80px;
-        display: flex;
-        align-items: center;
-      }
+      background-color: $color-primary;
+      border: 10px solid $color-primary;
+      height: 80px;
+      display: flex;
+      align-items: center;
+    }
   }
-  @media (max-width:360px) {
+  @media (max-width: 360px) {
     img {
-        width: 100%;
-        margin: auto;
-      }
+      width: 100%;
+      margin: auto;
+    }
     div {
-        flex-direction: column;
-        figure {
-            margin: 20px;
-            height: auto;
-          }
+      flex-direction: column;
+      figure {
+        margin: 20px;
+        height: auto;
       }
+    }
   }
 }
 
@@ -315,14 +314,14 @@ button {
     width: 50%;
     padding: 10px;
     &:nth-last-of-type(-n + 2) {
-        width: 100%;
-        text-align: center;
-      }
+      width: 100%;
+      text-align: center;
+    }
   }
-  @media (max-width:360px) {
+  @media (max-width: 360px) {
     div {
-        width: 100%;
-      }
+      width: 100%;
+    }
   }
 }
 
@@ -345,7 +344,7 @@ button {
   h2 {
     font-size: 3rem;
   }
-  
+
   button {
     width: 100%;
   }
