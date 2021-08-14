@@ -1,0 +1,4 @@
+@function get-grid-percentage($items-number) {
+  $result: 100 / $items-number#{"%"};
+  @return $result;
+}

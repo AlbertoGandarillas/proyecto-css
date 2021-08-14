@@ -1,0 +1,8 @@
+@mixin grid($width: null) {
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    @if ($width) {
+      width: $width;
+    }
+  }

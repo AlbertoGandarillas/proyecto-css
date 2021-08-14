@@ -1,0 +1,29 @@
+/* ==================
+     SECCION SERVICIOS 
+     ================== */
+
+.servicios {
+  background-color: $background-color-servicios;
+}
+
+.grid-servicios {
+  @include grid($section-container-width);
+
+  h3 {
+    margin-top: 10px;
+  }
+
+  img {
+    width: auto;
+  }
+
+  .servicio {
+    width: get-grid-percentage($grid-items-services);
+  }
+
+  @media (max-width: 360px) {
+    .servicio {
+      width: 100%;
+    }
+  }
+}
